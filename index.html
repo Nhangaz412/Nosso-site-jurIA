@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JurIA - Inteligência Jurídica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            background: #34495e;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .services, .contact {
+            margin-top: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 20px;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form input, .contact-form textarea, .contact-form button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .contact-form button {
+            background: #2c3e50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: #34495e;
+        }
+        .responsive-img {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bem-vindo à JurIA</h1>
+    <p>Transformando o Direito com Inteligência Artificial</p>
+</header>
+
+<nav>
+    <a href="#about">Sobre</a>
+    <a href="#services">Serviços</a>
+    <a href="#contact">Contato</a>
+</nav>
+
+<section id="about">
+    <h2>Sobre a JurIA</h2>
+    <p>A JurIA é uma solução inovadora que utiliza inteligência artificial para auxiliar advogados, escritórios de advocacia e departamentos jurídicos. 
+       Nossa missão é automatizar tarefas repetitivas, melhorar a precisão e aumentar a eficiência no setor jurídico.</p>
+    <img src="Imagem/IMG-20240628-WA0001~3.jpg">
+</section>
+
+<section id="services" class="services">
+    <h2>Nossos Serviços</h2>
+    <ul>
+        <li><strong>Análise de Documentos:</strong> Identificação e categorização rápida de cláusulas e termos jurídicos.</li>
+        <li><strong>Respostas Jurídicas:</strong> Consultas rápidas e precisas para dúvidas legais frequentes.</li>
+        <li><strong>Gestão de Processos:</strong> Acompanhamento e organização de casos jurídicos.</li>
+        <li><strong>Treinamento Personalizado:</strong> Adaptação da IA ao perfil jurídico da sua empresa.</li>
+    </ul>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Entre em Contato</h2>
+    <p>Gostaríamos de ouvir de você! Preencha o formulário abaixo para entrar em contato:</p>
+    <form class="contact-form" action="https://formspree.io/f/xyzybpqy" method="POST">
+        <input type="text" name="name" placeholder="Seu Nome" required>
+        <input type="email" name="email" placeholder="Seu Email" required>
+        <textarea name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 JurIA - Grupo1.</p>
+</footer>
+
+</body>
+</html>
+
+
+<body>
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.init({
+            chatflowid: "f4fe59b7-8a42-4e01-8040-4a446e79d349",
+            apiHost: "http://localhost:3000",
+            theme: {
+        button: {
+            backgroundColor: "#3B81F6",
+            right: 20,
+            bottom: 20,
+            size: 48, // small | medium | large | number
+            dragAndDrop: true,
+            iconColor: "white",
+            customIconSrc: "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
+            autoWindowOpen: {
+                autoOpen: true, //parameter to control automatic window opening
+                openDelay: 2, // Optional parameter for delay time in seconds
+                autoOpenOnMobile: false, //parameter to control automatic window opening in mobile
+                },
+        },
+        tooltip: {
+            showTooltip: true,
+            tooltipMessage: 'Olá Como Posso Ajudar Voce 👋!',
+            tooltipBackgroundColor: 'black',
+            tooltipTextColor: 'white',
+            tooltipFontSize: 16,
+        },
+        chatWindow: {
+            showTitle: true,
+            title: 'Flowise Bot',
+            titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+            showAgentMessages: true,
+            welcomeMessage: 'Hello There!',
+            errorMessage: 'This is a custom error message',
+            backgroundColor: "#ffffff",
+            backgroundImage: 'enter image path or link', // If set, this will overlap the background color of the chat window.
+            height: 700,
+            width: 400,
+            fontSize: 16,
+            //starterPrompts: ['What is a bot?', 'Who are you?'], // It overrides the starter prompts set by the chat flow passed
+            starterPromptFontSize: 15,
+            clearChatOnReload: false, // If set to true, the chat will be cleared when the page reloads.
+            botMessage: {
+                backgroundColor: "#f7f8ff",
+                textColor: "#303235",
+                showAvatar: true,
+                avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png",
+            },
+            userMessage: {
+                backgroundColor: "#3B81F6",
+                textColor: "#ffffff",
+                showAvatar: true,
+                avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+            },
+            textInput: {
+                placeholder: 'Type your question',
+                backgroundColor: '#ffffff',
+                textColor: '#303235',
+                sendButtonColor: '#3B81F6',
+                maxChars: 50,
+                maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
+                autoFocus: true, // If not used, autofocus is disabled on mobile and enabled on desktop. true enables it on both, false disables it on both.
+                sendMessageSound: true,
+                // sendSoundLocation: "send_message.mp3", // If this is not used, the default sound effect will be played if sendSoundMessage is true.
+                receiveMessageSound: true,
+                // receiveSoundLocation: "receive_message.mp3", // If this is not used, the default sound effect will be played if receiveSoundMessage is true. 
+            },
+            feedback: {
+                color: '#303235',
+            },
+            footer: {
+                textColor: '#303235',
+                text: 'Powered by',
+                company: 'Flowise',
+                companyLink: 'https://flowiseai.com',
+            }
+        }
+    }
+})
+    </script>
+    
+</body>
+
+</html>
