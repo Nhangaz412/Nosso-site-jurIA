@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Defesa de Trabalho Acadêmico</title>
+    <title>Sobre o Sistema - Defesa de Trabalho Acadêmico</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <style>
-        /* Reset de estilo básico */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Corpo e fontes */
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f0f8ff;
@@ -21,13 +19,11 @@
             line-height: 1.6;
         }
 
-        /* Container centralizado */
         .container {
             width: 90%;
             margin: 0 auto;
         }
 
-        /* Cabeçalho */
         header {
             background-color: #2d87f0;
             color: white;
@@ -41,39 +37,6 @@
             margin-bottom: 10px;
         }
 
-        header .subheading {
-            font-size: 18px;
-            font-weight: 300;
-        }
-
-        /* Navegação */
-        nav {
-            background-color: #333;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            padding: 15px 0;
-        }
-
-        nav ul li {
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 16px;
-        }
-
-        nav ul li a:hover {
-            color: #2d87f0;
-        }
-
-        /* Rodapé */
         footer {
             background-color: #333;
             color: white;
@@ -86,106 +49,40 @@
             font-size: 14px;
         }
 
-        /* Estilo do formulário de login */
-        .form-container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 500px;
-            margin: 40px auto;
+        .content {
+            margin-top: 30px;
+            text-align: center;
         }
 
-        form {
-            display: flex;
-            flex-direction: column;
+        .content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
         }
 
-        form label {
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
-
-        form input, form select {
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        form input:focus, form select:focus {
-            outline: none;
-            border-color: #2d87f0;
-        }
-
-        form button {
-            padding: 12px;
-            background-color: #2d87f0;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 500;
-        }
-
-        form button:hover {
-            background-color: #1e6eb8;
-        }
-
-        /* Responsividade */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 28px;
-            }
-
-            nav ul {
-                flex-direction: column;
-            }
-
-            nav ul li {
-                margin: 10px 0;
-            }
-
-            .form-container {
-                margin-top: 20px;
-            }
+        .content p {
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Sistema de Defesa de Trabalho Acadêmico</h1>
-            <p class="subheading">Gerencie a defesa do seu trabalho de conclusão de curso com eficiência.</p>
+            <h1>Sobre o Sistema</h1>
         </div>
     </header>
 
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="login.html">Entrar no Sistema</a></li>
-                <li><a href="sobre.html">Sobre o Sistema</a></li>
-            </ul>
+    <main>
+        <div class="content">
+            <h2>Objetivo do Sistema</h2>
+            <p>Este sistema foi desenvolvido para gerenciar de forma eficiente as defesas de trabalhos acadêmicos, facilitando a organização e o acompanhamento por todos os envolvidos, como presidente, avaliadores, supervisores e estudantes.</p>
         </div>
-    </nav>
-    <section id="contact" class="contact">
-        <h2>Entre em Contato</h2>
-        <p>Gostaríamos de ouvir de você! Preencha o formulário abaixo para entrar em contato:</p>
-        <form class="contact-form" action="https://formspree.io/f/xyzybpqy" method="POST">
-            <input type="text" name="name" placeholder="Seu Nome" required>
-            <input type="email" name="email" placeholder="Seu Email" required>
-            <textarea name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+    </main>
 
     <footer>
         <div class="container">
             <p>&copy; 2024 Sistema de Defesa Acadêmica | Todos os direitos reservados.</p>
         </div>
     </footer>
-
     <script type="module">
         import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
         Chatbot.init({
@@ -211,7 +108,7 @@
                 },
                 tooltip: {
                     showTooltip: true,
-                    tooltipMessage: 'Agente jurIA👋!',
+                    tooltipMessage: 'Agente jurIA 👋!',
                     tooltipBackgroundColor: 'black',
                     tooltipTextColor: 'white',
                     tooltipFontSize: 16,
